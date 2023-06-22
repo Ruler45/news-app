@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <script src="https://kit.fontawesome.com/3a5f3c0ea0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="asset/Logo.png" alt="company logo">
+            </a>
+            <div class="nav-links nav-go">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                    <li class="hover-link nav-item" id="education" onclick="onNavItemClick('education')">Education</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g. Science">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                    saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+    <footer id="footer">
+        <div class="foot container flex">
+            <div class="about flex">
+                <div class="heading">
+                    <h2> Created by: Sahin Alam</h2>
+                </div>
+                <div class="descri">Copyright 2023</div>
+                <div class="heading">About</div>
+                <div class="descri">This is a demo news website project I created to learn the use of API and its use.
+                    Though the design is not completely original yet it taught me to effectively use JavaScript. </div>
+            </div>
+            <div class="extra grid">
+                <div class="ex ">
+                    <div class="heading">Built with</div><br>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+
+                    </ul>
+                </div>
+                <div class="ex ">
+                    <div class="heading">Sources</div><br>
+                    <ul>
+                        <li><a target="_blank" href="https://fontawesome.com/">
+                                <i class="fa-brands fa-font-awesome"></i> Font Awesome
+                            </a>
+                        </li>
+
+                        <li>
+                            <a target="_blank" href="https://github.com/Ruler45/Portfolio">
+                                <i class="fa-brands fa-github"></i>GitHub
+                            </a>
+                        </li>
+                        <li><a target="_blank" href="https://newsapi.org/">
+                                New API
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="ex ">
+                    <div class="heading">Contacts</div><br>
+                    <ul>
+                        <a href="tel:6295265705">
+                            <li>Contact me</li>
+                        </a>
+                        <a target="_blank" href="https://www.linkedin.com/in/sahin-alam-96250324a/">
+                            <li><i class="fa-brands fa-linkedin"></i>LinkedIn</li>
+                        </a>
+                        <li>Privacy Policy</li>
+                        <li>Terms of Use</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html> 
